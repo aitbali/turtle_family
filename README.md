@@ -23,6 +23,3 @@ Things you may want to cover:
 
 * ...
 # turtle_family
-
-commandes :
-rails new -T --api -d postgresql -J turtle_family
