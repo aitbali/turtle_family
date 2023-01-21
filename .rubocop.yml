@@ -2,6 +2,7 @@ inherit_from:
   - http://relaxed.ruby.style/rubocop.yml
 
 AllCops:
+  NewCops: enable
   DisplayStyleGuide: true
   DisplayCopNames: true
   Exclude:
