@@ -9,8 +9,6 @@ AllCops:
     - 'vendor/**/*'
     - 'config/environments/*.rb'
 
-Rails:
-  Enabled: True
 
 Style/FrozenStringLiteralComment:
   Enabled: true

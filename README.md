@@ -75,4 +75,44 @@ Step 4 – Configuring and Creating Your Database
 
 Step 5 – Testing Your Configuration
 
+        $ Rail s
+
+Step 5 – Add Rubocop
+
+                Gemfile
+            
+            ...
+            group :development, :test do
+                # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+                gem 'debug', platforms: %i[mri mingw x64_mingw]
+                gem 'rubocop-rails', require: false
+            end
+            ...
+
+                .rubocop.yml
+
+            ...
+            inherit_from:
+            - http://relaxed.ruby.style/rubocop.yml
+
+            AllCops:
+            DisplayStyleGuide: true
+            DisplayCopNames: true
+            Exclude:
+                - 'db/schema.rb'
+                - 'vendor/**/*'
+                - 'config/environments/*.rb'
+
+
+            Style/FrozenStringLiteralComment:
+            Enabled: true
+
+            Metrics/BlockLength:
+            Exclude:
+                - 'spec/**/*.rb'
+                - 'Guardfile'
+                - 'vendor/bundle'
+            ...
+
+
 
